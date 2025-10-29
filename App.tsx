@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { Task } from './types.ts';
-import { TaskInputForm } from './components/TaskInputForm.tsx';
-import { TaskList } from './components/TaskList.tsx';
-import { CompletedTaskList } from './components/CompletedTaskList.tsx';
-import { BottomNav } from './components/BottomNav.tsx';
-import { generateAndPlaySpeech } from './services/ttsService.ts';
-import { EditTaskModal } from './components/EditTaskModal.tsx';
+import { Task } from './types';
+import { TaskInputForm } from './components/TaskInputForm';
+import { TaskList } from './components/TaskList';
+import { CompletedTaskList } from './components/CompletedTaskList';
+import { BottomNav } from './components/BottomNav';
+import { generateAndPlaySpeech } from './services/ttsService';
+import { EditTaskModal } from './components/EditTaskModal';
 
 type View = 'upcoming' | 'completed';
 

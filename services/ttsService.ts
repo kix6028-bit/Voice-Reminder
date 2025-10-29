@@ -1,5 +1,5 @@
 import { GoogleGenAI, Modality } from "@google/genai";
-import { decode, decodeAudioData } from '../utils/audioUtils.ts';
+import { decode, decodeAudioData } from '../utils/audioUtils';
 
 let outputAudioContext: AudioContext | null = null;
 
@@ -19,7 +19,7 @@ export const generateAndPlaySpeech = async (text: string): Promise<void> => {
     try {
         const response = await ai.models.generateContent({
             model: "gemini-2.5-flash-preview-tts",
-            contents: [{ parts: [{ text }] }],
+            contents: text,
             config: {
                 responseModalities: [Modality.AUDIO],
                 speechConfig: {

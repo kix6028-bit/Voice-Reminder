@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Task } from '../types.ts';
-import { TimePicker } from './TimePicker.tsx';
-import { RepeatOptions } from './RepeatOptions.tsx';
+import { Task } from '../types';
+import { TimePicker } from './TimePicker';
+import { RepeatOptions } from './RepeatOptions';
 
 interface EditTaskModalProps {
     task: Task;
