@@ -1,11 +1,6 @@
 import { GoogleGenAI, Modality } from "@google/genai";
 import { decode, decodeAudioData } from '../utils/audioUtils';
 
-// --- IMPORTANT ---
-// PASTE YOUR GEMINI API KEY HERE
-const API_KEY = "AIzaSyBfpHRuXq08TviECL1y90ckFIha_mILRJg"; 
-// -----------------
-
 let outputAudioContext: AudioContext | null = null;
 
 const getAudioContext = (): AudioContext => {
@@ -16,17 +11,15 @@ const getAudioContext = (): AudioContext => {
 };
 
 export const generateAndPlaySpeech = async (text: string): Promise<void> => {
-    if (API_KEY === "YOUR_API_KEY_HERE") {
-        console.error("API_KEY not set in services/ttsService.ts. Please add your key.");
-        alert("Reminder: API key not configured. Cannot play voice. The task is: " + text);
-        return;
+    if (!process.env.API_KEY) {
+        throw new Error("API_KEY environment variable not set");
     }
-    const ai = new GoogleGenAI({ apiKey: API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
     try {
         const response = await ai.models.generateContent({
             model: "gemini-2.5-flash-preview-tts",
-            contents: [{ parts: [{ text }] }], // Corrected format
+            contents: text,
             config: {
                 responseModalities: [Modality.AUDIO],
                 speechConfig: {
