@@ -3,7 +3,7 @@ import { decode, decodeAudioData } from '../utils/audioUtils';
 
 // --- IMPORTANT ---
 // PASTE YOUR GEMINI API KEY HERE
-const API_KEY = "YOUR_API_KEY_HERE"; 
+const API_KEY = "AIzaSyBfpHRuXq08TviECL1y90ckFIha_mILRJg"; 
 // -----------------
 
 let outputAudioContext: AudioContext | null = null;
