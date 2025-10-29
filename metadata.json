@@ -1,0 +1,7 @@
+{
+  "name": "Voice Task Reminder",
+  "description": "A modern, mobile-first web application that allows users to set task reminders and receive voice notifications at the scheduled time using Gemini Text-to-Speech.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
