@@ -19,7 +19,7 @@ export const generateAndPlaySpeech = async (text: string): Promise<void> => {
     try {
         const response = await ai.models.generateContent({
             model: "gemini-2.5-flash-preview-tts",
-            contents: text,
+            contents: [{ parts: [{ text }] }],
             config: {
                 responseModalities: [Modality.AUDIO],
                 speechConfig: {

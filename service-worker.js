@@ -1,5 +1,4 @@
-
-const CACHE_NAME = 'voice-reminder-cache-v2'; // Incremented cache version
+const CACHE_NAME = 'voice-reminder-cache-v3'; // Incremented cache version
 const APP_SHELL_URLS = [
   './',
   'index.html',
