@@ -1,5 +1,5 @@
 import { GoogleGenAI, Modality } from "@google/genai";
-import { decode, decodeAudioData } from '../utils/audioUtils';
+import { decode, decodeAudioData } from '../utils/audioUtils.ts';
 
 let outputAudioContext: AudioContext | null = null;
 

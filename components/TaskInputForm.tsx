@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { TimePicker } from './TimePicker';
-import { RepeatOptions } from './RepeatOptions';
+import { TimePicker } from './TimePicker.tsx';
+import { RepeatOptions } from './RepeatOptions.tsx';
 
 interface TaskInputFormProps {
     onAddTask: (text: string, time: string, repeatCount: number, repeatInterval: number) => boolean;

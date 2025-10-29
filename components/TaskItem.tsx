@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { Task } from '../types';
-import { TrashIcon } from './icons/TrashIcon';
-import { PencilIcon } from './icons/PencilIcon';
-import { RepeatIcon } from './icons/RepeatIcon';
+import { Task } from '../types.ts';
+import { TrashIcon } from './icons/TrashIcon.tsx';
+import { PencilIcon } from './icons/PencilIcon.tsx';
+import { RepeatIcon } from './icons/RepeatIcon.tsx';
 
 interface TaskItemProps {
     task: Task;

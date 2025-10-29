@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { CalendarIcon } from './icons/CalendarIcon';
-import { CheckIcon } from './icons/CheckIcon';
+import { CalendarIcon } from './icons/CalendarIcon.tsx';
+import { CheckIcon } from './icons/CheckIcon.tsx';
 
 type View = 'upcoming' | 'completed';
 
